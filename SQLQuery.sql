@@ -22,3 +22,5 @@ FROM cte
 GROUP BY NAME, MONTH
 HAVING MONTH = 6
 ORDER BY price DESC;
+
+--Question2:
