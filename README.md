@@ -6,7 +6,8 @@
 * [Clean the data](https://github.com/Rebekah-Chuang/Fetch_DA_2023_intern#clean-the-data)
 * [PartI: Create a New Relational Data Model](https://github.com/Rebekah-Chuang/Fetch_DA_2023_intern#create-a-new-relational-data-model)
 * [PartII: SQL Queries](https://github.com/Rebekah-Chuang/Fetch_DA_2023_intern#sql-queries)
-* [PartIII: Insights] (https://github.com/Rebekah-Chuang/Fetch_DA_2023_intern#insights)
+* [PartIII: Insights](https://github.com/Rebekah-Chuang/Fetch_DA_2023_intern#insights)
+
 ## About The Project
 This project is for Fetch Rewards Data Analytics 2023 Summer Internship. 
 The following csv files are the 4 given original sample data files:
