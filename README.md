@@ -81,4 +81,4 @@ GROUP BY brand_name, month
 HAVING MONTH = 6
 ORDER BY price DESC;
  ```
-[Q1 output](Q1%20output.png)
+![Q1 output](Q1%20output.png)
