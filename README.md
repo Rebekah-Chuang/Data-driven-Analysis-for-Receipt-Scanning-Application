@@ -54,6 +54,7 @@ For the original files of SQL Queries, please see attached file, but I will also
  
  [SQL Queries](SQLQuery.sql)
 
+
  ### Question1: Which brand saw the most dollars spent in the month of June?
  
  ```
@@ -83,6 +84,7 @@ ORDER BY price DESC;
  ```
 ![Q1 output](SQL%20questions%20output/Q1%20output.png)
 
+
 ### Question2: Which user spent the most money in the month of August?
 ```
 WITH cte AS
@@ -106,6 +108,7 @@ HAVING month = 8
 ORDER BY total_spent DESC;
 ```
 ![Q2 output](SQL%20questions%20output/Q2%20output.png)
+
 
 ### Question3: What user bought the most expensive item?
 ### Question4: What is the name of the most expensive item purchased?
