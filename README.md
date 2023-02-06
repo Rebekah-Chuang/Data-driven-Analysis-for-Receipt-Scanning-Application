@@ -145,3 +145,47 @@ FROM cte
 ORDER BY item_price DESC;
 ```
 ![Q3Q4 output](SQL%20questions%20output/Q3Q4%20output.png)
+
+
+### Question5: How many users scanned in each month?
+
+```
+WITH cte AS
+(
+    SELECT
+        u.ID AS user_id,
+        MONTH(r.DATE_SCANNED) AS month_scanned
+    FROM users AS u
+    JOIN receipts AS r
+    ON u.ID = r.USER_ID
+)
+
+SELECT
+    CASE WHEN month = 1 THEN 'JAN'
+    WHEN month = 2 THEN 'FEB'
+    WHEN month = 3 THEN 'MAR'
+    WHEN month = 4 THEN 'APR'
+    WHEN month = 5 THEN 'MAY'
+    WHEN month = 6 THEN 'JUN'
+    WHEN month = 7 THEN 'JUL'
+    WHEN month = 8 THEN 'AUG'
+    WHEN month = 9 THEN 'SEP'
+    WHEN month = 10 THEN 'OCT'
+    WHEN month = 11 THEN 'NOV'
+    ELSE 'DEC' END AS month,
+    user_id_count
+FROM
+(
+    SELECT
+        TOP 12 month_scanned AS month,
+        COUNT(user_id) AS user_id_count
+    FROM cte
+    GROUP BY month_scanned
+    ORDER BY month
+)sub;
+```
+
+![Q5 output](SQL%20questions%20output/Q5%20output.png)
+
+
+### Question6: 
