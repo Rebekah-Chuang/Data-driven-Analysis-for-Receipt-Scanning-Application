@@ -12,7 +12,7 @@ The following csv files are the 4 given original sample data files:
 
 4. [users.csv](users.csv)
 
-The goal of this projecy is to:
+The goal of this project is to:
 1. Review CSV data and diagram a new structured relational data model
 
 2. Generate a query that answers a predetermined business question(s) 
@@ -38,7 +38,9 @@ When saving new files, I add a suffix ```_2``` to differenciate them from origin
 
 ## Create a New Relational Data Model
 The next step is diagraming a new structured relational data model. After cleaning the data, I created a new ER diagram(Entity-Relationship Diagram) for this database(shown as below).
+
 **PK** stands for **Primary Key**
+
 **FK** stands for **Foreign Key**
 
 ![Relational Data Model Diagram](Relational%20Data%20Model.png)
