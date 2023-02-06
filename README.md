@@ -45,6 +45,38 @@ The next step is diagraming a new structured relational data model. After cleani
 
 ![Relational Data Model Diagram](Relational%20Data%20Model.png)
 
-```
-[Clean Data.ipynb](Clean Data.ipynb)
-```
+ ## SQL Queries
+ After creating a new relational data model, I need to write queries to ansert questions from business stakeholders.
+
+ Question 1-5 are those given by Fetch Rewards, and Question 6-10 are those I created that might be helpful.
+ For the original files of SQL Queries, please see attached file, but I will also leave my code and notes below!
+ 
+ [SQL Queries](SQLQuery.sql)
+
+ Question1: Which brand saw the most dollars spent in the month of June?
+ 
+ ```
+ WITH cte AS
+(
+    SELECT
+        b.BARCODE,
+        b.NAME AS brand_name,
+        ri.TOTAL_FINAL_PRICE,
+        r.PURCHASE_DATE,
+        MONTH(r.PURCHASE_DATE) AS month
+    FROM dbo.brands AS b
+    JOIN dbo.receipt_items AS ri
+    ON b.BARCODE = ri.BARCODE
+    JOIN dbo.receipts AS r
+    ON r.ID = ri.REWARDS_RECEIPT_ID
+)
+
+SELECT
+    TOP 1 brand_name,
+    SUM(TOTAL_FINAL_PRICE) AS price,
+    month
+FROM cte
+GROUP BY brand_name, month
+HAVING MONTH = 6
+ORDER BY price DESC;
+ ```
