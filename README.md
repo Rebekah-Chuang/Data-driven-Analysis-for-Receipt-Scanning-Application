@@ -188,4 +188,93 @@ FROM
 ![Q5 output](SQL%20questions%20output/Q5%20output.png)
 
 
-### Question6: 
+### Question6: What is the top 10 category that has the most brands?
+
+```
+SELECT
+    TOP 10 COUNT(NAME) AS brand_count,
+    CATEGORY AS category
+FROM brands
+GROUP BY category
+HAVING category IS NOT NULL
+ORDER BY brand_count DESC;
+```
+
+![Q6 output](SQL%20questions%20output/Q6%20output.png)
+
+
+### Question7: How much does each store earn in 2022 (list TOP 20)?
+
+```
+SELECT
+    TOP 20 STORE_NAME AS store_name,
+    ROUND(SUM(TOTAL_SPENT), 3) AS revenue
+FROM receipts
+WHERE YEAR(PURCHASE_DATE) = 2022
+GROUP BY store_name
+ORDER BY revenue DESC;
+```
+
+![Q7 output](SQL%20questions%20output/Q7%20output.png)
+
+
+### Question8: What are the top 5 states that registered users come from?
+
+```
+SELECT
+    TOP 5 STATE AS state,
+    COUNT(*) AS count
+FROM users
+GROUP BY state
+ORDER BY count DESC;
+```
+
+![Q8 output](SQL%20questions%20output/Q8%20output.png)
+
+
+### Question9: What is the age distribution of the registered users?
+
+```
+WITH cte AS
+(
+    SELECT
+        *,
+        CASE WHEN age BETWEEN 0 AND 10 THEN '0-10'
+        WHEN age BETWEEN 11 AND 20 THEN '11-20'
+        WHEN age BETWEEN 21 AND 30 THEN '21-30'
+        WHEN age BETWEEN 31 AND 40 THEN '31-40'
+        WHEN age BETWEEN 41 AND 50 THEN '41-50'
+        WHEN age BETWEEN 51 AND 60 THEN '51-60'
+        WHEN age BETWEEN 61 AND 70 THEN '61-70'
+        WHEN age BETWEEN 71 AND 80 THEN '71-80'
+        END AS age_range
+    FROM
+    (
+        SELECT
+            *,
+            2023 - YEAR(BIRTH_DATE) AS age
+        FROM users
+    ) sub
+)
+
+SELECT
+    age_range,
+    COUNT(*) AS age_range_count
+FROM cte
+GROUP BY age_range;
+```
+
+![Q9 output](SQL%20questions%20output/Q9%20output.png)
+
+
+### Question10: 
+
+```
+SELECT
+    SIGN_UP_SOURCE AS sign_up_source,
+    COUNT(*) AS source_count
+FROM users
+GROUP BY sign_up_source;
+```
+
+![Q10 output](SQL%20questions%20output/Q10%20output.png)
