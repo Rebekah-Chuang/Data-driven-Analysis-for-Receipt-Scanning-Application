@@ -75,7 +75,7 @@ WITH cte AS
     AND (quantity_purchased != 0)
 )
 SELECT
-    user_id,
+    TOP 1 user_id,
     item_name,
     item_price
 FROM cte
@@ -108,11 +108,11 @@ GROUP BY category
 HAVING category IS NOT NULL
 ORDER BY brand_count DESC;
 
---Question7: How much does each store earn in 2022?
+--Question7: How much does each store earn in 2022 (list TOP 20)?
 
 SELECT
-    ROUND(SUM(TOTAL_SPENT), 3) AS revenue,
-    STORE_NAME AS store_name
+    TOP 20 STORE_NAME AS store_name,
+    ROUND(SUM(TOTAL_SPENT), 3) AS revenue
 FROM receipts
 WHERE YEAR(PURCHASE_DATE) = 2022
 GROUP BY store_name
@@ -128,3 +128,38 @@ GROUP BY state
 ORDER BY state;
 
 --Question9: What is the age distribution of the registered users?
+WITH cte AS
+(
+    SELECT
+        *,
+        CASE WHEN age BETWEEN 0 AND 10 THEN '0-10'
+        WHEN age BETWEEN 11 AND 20 THEN '11-20'
+        WHEN age BETWEEN 21 AND 30 THEN '21-30'
+        WHEN age BETWEEN 31 AND 40 THEN '31-40'
+        WHEN age BETWEEN 41 AND 50 THEN '41-50'
+        WHEN age BETWEEN 51 AND 60 THEN '51-60'
+        WHEN age BETWEEN 61 AND 70 THEN '61-70'
+        WHEN age BETWEEN 71 AND 80 THEN '71-80'
+        END AS age_range
+    FROM
+    (
+        SELECT
+            *,
+            2023 - YEAR(BIRTH_DATE) AS age
+        FROM users
+    ) sub
+    
+)
+
+SELECT
+    age_range,
+    COUNT(*) AS age_range_count
+FROM cte
+GROUP BY age_range;
+
+--Question10: What is the distribution of the sign up source?
+SELECT
+    SIGN_UP_SOURCE AS sign_up_source,
+    COUNT(*) AS source_count
+FROM users
+GROUP BY sign_up_source;
