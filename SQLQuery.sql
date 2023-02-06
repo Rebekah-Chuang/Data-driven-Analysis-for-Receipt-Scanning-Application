@@ -1,5 +1,5 @@
 --Question1: Which brand saw the most dollars spent in the month of June?
---brand name : Brooks(139.99 USD)
+--brand name : Brooks spent 139.99 USD in June
 
 WITH cte AS
 (
