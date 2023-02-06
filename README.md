@@ -47,13 +47,13 @@ The next step is diagraming a new structured relational data model. After cleani
 
  ## SQL Queries
  After creating a new relational data model, I need to write queries to ansert questions from business stakeholders.
-
+The SQL dialect I chose was **MSSQL**
  Question 1-5 are those given by Fetch Rewards, and Question 6-10 are those I created that might be helpful.
  For the original files of SQL Queries, please see attached file, but I will also leave my code and notes below!
  
  [SQL Queries](SQLQuery.sql)
 
- Question1: Which brand saw the most dollars spent in the month of June?
+ **Question1: Which brand saw the most dollars spent in the month of June?**
  
  ```
  WITH cte AS
