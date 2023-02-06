@@ -106,3 +106,36 @@ HAVING month = 8
 ORDER BY total_spent DESC;
 ```
 ![Q2 output](SQL%20questions%20output/Q2%20output.png)
+
+**Question3: What user bought the most expensive item?**
+**Question4: What is the name of the most expensive item purchased?**
+Question3&4 can be answered using the same query. After looking at the output, I think there must be some typo in the original file because the price of **Starbucks Iced Coffee Premium Coffee Beverage Unsweetened Blonde Roast Bottle 48 Oz 1 Ct** shouldn't be that expensive. However, since I'm not sure about the correct price and if there are any other typos or nor, I decided to keep the original number.
+
+```
+WITH cte AS
+(
+    SELECT
+        u.ID AS user_id,
+        r.ID AS receipt_id,
+        ri.DESCRIPTION AS item_name,
+        CAST(ROUND(ri.TOTAL_FINAL_PRICE, 2) AS DECIMAL(10,2)) AS total_final_price,
+        ri.QUANTITY_PURCHASED AS quantity_purchased,
+        CAST(ROUND(total_final_price/quantity_purchased, 2) AS FLOAT) AS item_price
+    FROM users AS u
+    JOIN receipts AS r
+    ON u.ID = r.USER_ID
+    JOIN receipt_items AS ri
+    ON r.ID = ri.REWARDS_RECEIPT_ID
+    WHERE (total_final_price IS NOT NULL)
+    AND (total_final_price != 0)
+    AND (quantity_purchased IS NOT NULL)
+    AND (quantity_purchased != 0)
+)
+SELECT
+    TOP 1 user_id,
+    item_name,
+    item_price
+FROM cte
+ORDER BY item_price DESC;
+```
+![Q3Q4 output](SQL%20questions%20output/Q3Q4%20output.png)
