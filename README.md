@@ -57,7 +57,7 @@ For the original files of SQL Queries, please see attached file, but I will also
 
  ### Question1: Which brand saw the most dollars spent in the month of June?
  
- ```
+ ```SQL
 WITH cte AS
 (
     SELECT
@@ -86,7 +86,7 @@ ORDER BY price DESC;
 
 
 ### Question2: Which user spent the most money in the month of August?
-```
+```SQL
 WITH cte AS
 (
     SELECT
@@ -117,7 +117,7 @@ ORDER BY total_spent DESC;
 >
 > Question3&4 can be answered using the same query. After looking at the output, I think there must be some typo in the original file because the price of **Starbucks Iced Coffee Premium Coffee Beverage Unsweetened Blonde Roast Bottle 48 Oz 1 Ct** shouldn't be that expensive. However, since I'm not sure about the correct price and if there are any other typos or not, I decided to keep the original number.
 
-```
+```SQL
 WITH cte AS
 (
     SELECT
@@ -149,7 +149,7 @@ ORDER BY item_price DESC;
 
 ### Question5: How many users scanned in each month?
 
-```
+```SQL
 WITH cte AS
 (
     SELECT
@@ -190,7 +190,7 @@ FROM
 
 ### Question6: What is the top 10 category that has the most brands?
 
-```
+```SQL
 SELECT
     TOP 10 COUNT(NAME) AS brand_count,
     CATEGORY AS category
@@ -205,7 +205,7 @@ ORDER BY brand_count DESC;
 
 ### Question7: How much does each store earn in 2022 (list TOP 20)?
 
-```
+```SQL
 SELECT
     TOP 20 STORE_NAME AS store_name,
     ROUND(SUM(TOTAL_SPENT), 3) AS revenue
@@ -220,7 +220,7 @@ ORDER BY revenue DESC;
 
 ### Question8: What are the top 5 states that registered users come from?
 
-```
+```SQL
 SELECT
     TOP 5 STATE AS state,
     COUNT(*) AS count
@@ -234,7 +234,7 @@ ORDER BY count DESC;
 
 ### Question9: What is the age distribution of the registered users?
 
-```
+```SQL
 WITH cte AS
 (
     SELECT
@@ -269,7 +269,7 @@ GROUP BY age_range;
 
 ### Question10: 
 
-```
+```SQL
 SELECT
     SIGN_UP_SOURCE AS sign_up_source,
     COUNT(*) AS source_count
