@@ -10,7 +10,7 @@ The following csv files are the 4 given original sample data files:
 
 3. [receipts.csv](Original%20csv%20files/receipts.csv)
 
-4. [users.csv](Original%20csv%20files/Newusers.csv)
+4. [users.csv](Original%20csv%20files/users.csv)
 
 The goal of this project is to:
 1. Review CSV data and diagram a new structured relational data model
