@@ -108,8 +108,11 @@ ORDER BY total_spent DESC;
 ![Q2 output](SQL%20questions%20output/Q2%20output.png)
 
 **Question3: What user bought the most expensive item?**
+
 **Question4: What is the name of the most expensive item purchased?**
-Question3&4 can be answered using the same query. After looking at the output, I think there must be some typo in the original file because the price of **Starbucks Iced Coffee Premium Coffee Beverage Unsweetened Blonde Roast Bottle 48 Oz 1 Ct** shouldn't be that expensive. However, since I'm not sure about the correct price and if there are any other typos or nor, I decided to keep the original number.
+
+> **Note**
+> Question3&4 can be answered using the same query. After looking at the output, I think there must be some typo in the original file because the price of **Starbucks Iced Coffee Premium Coffee Beverage Unsweetened Blonde Roast Bottle 48 Oz 1 Ct** shouldn't be that expensive. However, since I'm not sure about the correct price and if there are any other typos or nor, I decided to keep the original number.
 
 ```
 WITH cte AS
