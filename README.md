@@ -7,7 +7,7 @@ The following csv files are the original ones:
 
 [receipt_items.csv](https://github.com/Rebekah-Chuang/Fetch_DA_2023_intern/blob/main/receipt_items.csv)
 
-[receipts.csv](https://github.com/Rebekah-Chuang/Fetch_DA_2023_intern/blob/main/receipts.csv)
+[receipts.csv](receipts.csv)
 
 [users.csv](https://github.com/Rebekah-Chuang/Fetch_DA_2023_intern/blob/main/users.csv)
 
@@ -27,7 +27,7 @@ First, I started cleaning the data using Python. I dropped useless columns, conv
 For more details about how I clean the data, please see the attached file.
 
 ```
-Clean Data.ipynb
+[Clean Data.ipynb](Clean Data.ipynb)
 ```
 
 When saving new files, I add a suffix '_2' to differenciate them from original files. However, I changed the file name into the original one when importing csv files into SQL Server.
