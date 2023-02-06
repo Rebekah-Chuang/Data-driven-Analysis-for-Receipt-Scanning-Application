@@ -11,6 +11,8 @@
 This project is for Fetch Rewards Data Analytics 2023 Summer Internship. 
 The following csv files are the 4 given original sample data files:
 
+Path:  ```Fetch_DA_2023_intern/Original csv files/ ```
+
 1. [brands.csv](Original%20csv%20files/brands.csv)
 
 2. [receipt_items.csv](Original%20csv%20files/receipt_items.csv)
@@ -30,9 +32,13 @@ The goal of this project is to:
 First, I started cleaning the data using Python(NumPy, Pandas). I dropped useless columns, converted datatype, and saved them into new files.
 For more details about how I clean the data, please see the attached Jupyter Notebook.
 
+Path:  ```Fetch_DA_2023_intern/Clean Data.ipynb ```
+
 [Clean Data.ipynb](Clean%20Data.ipynb)
 
 When saving new files, I add a suffix ```_2``` to differenciate them from original files. However, I changed the file name into the original one when importing csv files into SQL Server so that it is more convenient when running queries.
+
+Path:  ```Fetch_DA_2023_intern/New csv files/ ```
 
 1. [brands_2.csv](New%20csv%20files/brands_2.csv)
 
@@ -58,6 +64,8 @@ The SQL dialect I chose was **MSSQL**
 
 Question 1-5 are those given by Fetch Rewards, and Question 6-10 are those I created that might be helpful.
 For the original files of SQL Queries, please see attached file, but I will also leave my code and notes below!
+
+Path:  ```Fetch_DA_2023_intern/SQLQuery.sql ```
  
  [SQL Queries](SQLQuery.sql)
 
