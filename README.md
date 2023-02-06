@@ -297,5 +297,4 @@ GROUP BY sign_up_source;
 
 
 ## Insights
-
-![Viz1](https://github.com/Rebekah-Chuang/Fetch_DA_2023_intern/blob/main/Visualization/user_state_distribution.mov)
+https://user-images.githubusercontent.com/83235098/217062289-875dd0b3-880e-4d09-a600-e6a07d56caca.mov
