@@ -57,7 +57,7 @@ For the original files of SQL Queries, please see attached file, but I will also
  **Question1: Which brand saw the most dollars spent in the month of June?**
  
  ```
- WITH cte AS
+WITH cte AS
 (
     SELECT
         b.BARCODE,
@@ -65,10 +65,10 @@ For the original files of SQL Queries, please see attached file, but I will also
         ri.TOTAL_FINAL_PRICE,
         r.PURCHASE_DATE,
         MONTH(r.PURCHASE_DATE) AS month
-    FROM dbo.brands AS b
-    JOIN dbo.receipt_items AS ri
+    FROM brands AS b
+    JOIN receipt_items AS ri
     ON b.BARCODE = ri.BARCODE
-    JOIN dbo.receipts AS r
+    JOIN receipts AS r
     ON r.ID = ri.REWARDS_RECEIPT_ID
 )
 
@@ -81,3 +81,4 @@ GROUP BY brand_name, month
 HAVING MONTH = 6
 ORDER BY price DESC;
  ```
+[Q1 output](Q1%20output.png)
