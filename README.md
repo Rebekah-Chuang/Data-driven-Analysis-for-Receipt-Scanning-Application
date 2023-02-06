@@ -4,13 +4,13 @@
 This project is for Fetch Rewards Data Analytics 2023 Summer Internship. 
 The following csv files are the 4 given original sample data files:
 
-1. [brands.csv](brands.csv)
+1. [brands.csv](Original%20csv%20files/brands.csv)
 
-2. [receipt_items.csv](receipt_items.csv)
+2. [receipt_items.csv](Original%20csv%20files/receipt_items.csv)
 
-3. [receipts.csv](receipts.csv)
+3. [receipts.csv](Original%20csv%20files/receipts.csv)
 
-4. [users.csv](users.csv)
+4. [users.csv](Original%20csv%20files/Newusers.csv)
 
 The goal of this project is to:
 1. Review CSV data and diagram a new structured relational data model
@@ -27,13 +27,13 @@ For more details about how I clean the data, please see the attached Jupyter Not
 
 When saving new files, I add a suffix ```_2``` to differenciate them from original files. However, I changed the file name into the original one when importing csv files into SQL Server so that it is more convenient when running queries.
 
-1. [brands_2.csv](brands_2.csv)
+1. [brands_2.csv](New%20csv%20files/brands_2.csv)
 
-2. [receipt_items_2.csv](receipt_items_2.csv)
+2. [receipt_items_2.csv](New%20csv%20files/receipt_items_2.csv)
 
-3. [receipts_2.csv](receipts_2.csv)
+3. [receipts_2.csv](New%20csv%20files/receipts_2.csv)
 
-4. [users_2.csv](users_2.csv)
+4. [users_2.csv](New%20csv%20files/users_2.csv)
 
 
 ## Create a New Relational Data Model
