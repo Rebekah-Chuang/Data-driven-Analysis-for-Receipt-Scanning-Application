@@ -112,7 +112,7 @@ ORDER BY total_spent DESC;
 **Question4: What is the name of the most expensive item purchased?**
 
 > **Note**
-
+>
 > Question3&4 can be answered using the same query. After looking at the output, I think there must be some typo in the original file because the price of **Starbucks Iced Coffee Premium Coffee Beverage Unsweetened Blonde Roast Bottle 48 Oz 1 Ct** shouldn't be that expensive. However, since I'm not sure about the correct price and if there are any other typos or nor, I decided to keep the original number.
 
 ```
