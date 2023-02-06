@@ -1,29 +1,33 @@
---Question1: Which brand saw the most dollars spent in the month of June? -->OK
+--Question1: Which brand saw the most dollars spent in the month of June?
+--brand name : Brooks(139.99 USD)
+
 WITH cte AS
 (
     SELECT
         b.BARCODE,
-        b.NAME,
+        b.NAME AS brand_name,
         ri.TOTAL_FINAL_PRICE,
         r.PURCHASE_DATE,
         MONTH(r.PURCHASE_DATE) AS month
-    FROM dbo.brands_2 AS b
-    JOIN dbo.receipt_items_2 AS ri
+    FROM dbo.brands AS b
+    JOIN dbo.receipt_items AS ri
     ON b.BARCODE = ri.BARCODE
-    JOIN dbo.receipts_2 AS r
+    JOIN dbo.receipts AS r
     ON r.ID = ri.REWARDS_RECEIPT_ID
 )
 
 SELECT
-    TOP 1 NAME,
-    SUM(TOTAL_FINAL_PRICE) AS PRICE,
-    MONTH
+    TOP 1 brand_name,
+    SUM(TOTAL_FINAL_PRICE) AS price,
+    month
 FROM cte
-GROUP BY NAME, MONTH
+GROUP BY brand_name, month
 HAVING MONTH = 6
 ORDER BY price DESC;
 
---Question2: Which user spent the most money in the month of August? -->OK
+--Question2: Which user spent the most money in the month of August?
+--user_id:609ab37f7a2e8f2f95ae968f
+--spent 157844.68 USD in August
 
 WITH cte AS
 (
@@ -31,8 +35,8 @@ WITH cte AS
         u.ID AS user_id,
         MONTH(r.PURCHASE_DATE) AS month,
         r.TOTAL_SPENT
-    FROM users_2 AS u
-    JOIN receipts_2 AS r
+    FROM users AS u
+    JOIN receipts AS r
     ON u.ID = r.USER_ID
 )
 
@@ -46,49 +50,46 @@ HAVING month = 8
 ORDER BY total_spent DESC;
 
 --Question3: What user bought the most expensive item?
--- CAST(ROUND(ri.TOTAL_FINAL_PRICE/ri.QUANTITY_PURCHASED, 2) AS DECIMAL(10,2)) AS item_price
+-- user_id:617376b8a9619d488190e0b6
+
+--Question4: What is the name of the most expensive item purchased?
+--item_name : Starbucks Iced Coffee Premium Coffee Beverage Unsweetened Blonde Roast Bottle 48 Oz 1 Ct
+
 WITH cte AS
 (
     SELECT
-        TOP 20 u.ID AS user_id,
+        u.ID AS user_id,
         r.ID AS receipt_id,
         ri.DESCRIPTION AS item_name,
-        ri.QUANTITY_PURCHASED,
-        ri.TOTAL_FINAL_PRICE
-    FROM users_2 AS u
-    JOIN receipts_2 AS r
+        CAST(ROUND(ri.TOTAL_FINAL_PRICE, 2) AS DECIMAL(10,2)) AS total_final_price,
+        ri.QUANTITY_PURCHASED AS quantity_purchased,
+        CAST(ROUND(total_final_price/quantity_purchased, 2) AS FLOAT) AS item_price
+    FROM users AS u
+    JOIN receipts AS r
     ON u.ID = r.USER_ID
-    JOIN receipt_items_2 AS ri
+    JOIN receipt_items AS ri
     ON r.ID = ri.REWARDS_RECEIPT_ID
-    ORDER BY TOTAL_FINAL_PRICE DESC
+    WHERE (total_final_price IS NOT NULL)
+    AND (total_final_price != 0)
+    AND (quantity_purchased IS NOT NULL)
+    AND (quantity_purchased != 0)
 )
-
 SELECT
-    TOP 1 user_id,
+    user_id,
     item_name,
-    QUANTITY_PURCHASED,
-    TOTAL_FINAL_PRICE,
-    TOTAL_FINAL_PRICE/QUANTITY_PURCHASED AS item_price
+    item_price
 FROM cte
 ORDER BY item_price DESC;
 
---Question4: What is the name of the most expensive item purchased?
--- SELECT
---     TOP 5 DESCRIPTION AS item_name,
---     QUANTITY_PURCHASED,
---     TOTAL_FINAL_PRICE,
---     ROUND(TOTAL_FINAL_PRICE/QUANTITY_PURCHASED, 2) AS item_price
--- FROM receipt_items_2
--- ORDER BY item_price DESC;
+--Question5: How many users scanned in each month?
 
---Question5: How many users scanned in each month? >>OK
 WITH cte AS
 (
     SELECT
         u.ID AS user_id,
         MONTH(r.DATE_SCANNED) AS month_scanned
-    FROM users_2 AS u
-    JOIN receipts_2 AS r
+    FROM users AS u
+    JOIN receipts AS r
     ON u.ID = r.USER_ID
 )
 
@@ -97,28 +98,33 @@ SELECT
 FROM cte
 GROUP BY month_scanned;
 
---Question6: What is the top 10 category that has the most brand?
+--Question6: What is the top 10 category that has the most brands?
+
 SELECT
-    TOP 10 COUNT(NAME) AS count,
+    TOP 10 COUNT(NAME) AS brand_count,
     CATEGORY AS category
-FROM brands_2
+FROM brands
 GROUP BY category
 HAVING category IS NOT NULL
-ORDER BY count DESC;
+ORDER BY brand_count DESC;
 
 --Question7: How much does each store earn in 2022?
+
 SELECT
     ROUND(SUM(TOTAL_SPENT), 3) AS revenue,
     STORE_NAME AS store_name
-FROM receipts_2
+FROM receipts
 WHERE YEAR(PURCHASE_DATE) = 2022
 GROUP BY store_name
 ORDER BY revenue DESC;
 
 --Question8: Calculate the number of user from each state.
+
 SELECT
     COUNT(*) AS count,
     STATE AS state
-FROM users_2
+FROM users
 GROUP BY state
 ORDER BY state;
+
+--Question9: What is the age distribution of the registered users?
