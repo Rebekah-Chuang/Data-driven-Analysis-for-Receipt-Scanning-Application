@@ -82,3 +82,27 @@ HAVING MONTH = 6
 ORDER BY price DESC;
  ```
 ![Q1 output](SQL%20questions%20output/Q1%20output.png)
+
+**Question2: Which user spent the most money in the month of August?**
+```
+WITH cte AS
+(
+    SELECT
+        u.ID AS user_id,
+        MONTH(r.PURCHASE_DATE) AS month,
+        r.TOTAL_SPENT
+    FROM users AS u
+    JOIN receipts AS r
+    ON u.ID = r.USER_ID
+)
+
+SELECT
+    TOP 1 user_id,
+    month,
+    SUM(TOTAL_SPENT) AS total_spent
+FROM cte
+GROUP BY user_id, month
+HAVING month = 8
+ORDER BY total_spent DESC;
+```
+![Q2 output](SQL%20questions%20output/Q2%20output.png)
