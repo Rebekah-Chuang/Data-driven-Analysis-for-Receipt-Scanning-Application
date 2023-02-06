@@ -9,10 +9,10 @@ WITH cte AS
         ri.TOTAL_FINAL_PRICE,
         r.PURCHASE_DATE,
         MONTH(r.PURCHASE_DATE) AS month
-    FROM dbo.brands AS b
-    JOIN dbo.receipt_items AS ri
+    FROM brands AS b
+    JOIN receipt_items AS ri
     ON b.BARCODE = ri.BARCODE
-    JOIN dbo.receipts AS r
+    JOIN receipts AS r
     ON r.ID = ri.REWARDS_RECEIPT_ID
 )
 
