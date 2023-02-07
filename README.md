@@ -299,20 +299,51 @@ GROUP BY sign_up_source;
 ## Insights
 ### 1. Distribution of Registered Users **(Map)**:
 
+1. Distribution of Registered Users **(Map)**:
+
     The visualization below show the distribution od registered users. From this visualization, we can know that Florida State is the state that the most registered users located, since the color of the Florida state is the darkest among the whole map.
+    
+    
+
+https://user-images.githubusercontent.com/83235098/217133145-8b174404-0184-4d1a-99e5-03d0e3bfc845.mov
+
+
 
 ### 2. Rewards Receipts Status **(Highlight table)**:
 
     From the highlight table below, we can know the number and percentage of the receipt that are FINISHED/FLAGGED/PENDING/REJECTED/SUBMITTED. For example, among all the rewards receipts, 91.15% of them are finished(which is 64,350). The darker color represents the higher percentage/number.
+    
+    
+
+https://user-images.githubusercontent.com/83235098/217133184-c99301a7-4f10-404f-a90a-969c8ee72d94.mov
+
+
 
 ### 3. Top 20 Stores's Revenue By Yea(2020-2023) **(Treemap)**:
 
     In the following dashboard, I created a treemap to visualize store's revenue(top 20) each year. Users can use the slider above the dashboard to filter the year they want. The bigger the area, the larger the revenue. When users hover over the dashboard, they can see the corresponding store name and its revenue that year.
+    
+    
+
+https://user-images.githubusercontent.com/83235098/217133216-0c7da09b-73c7-4774-afc9-e090d7d34180.mov
+
+
 
 ### 4. Brand Count(By Category) **(Treemap)**:
 
     This visualization can used to answer Question 6. From this treemap, we can know that **Beverages** is the category that has the most brand among all the categories. When users hover over the visualization, they can see the category and its brand count.
+    
+    
+
+https://user-images.githubusercontent.com/83235098/217133252-923d1f49-df9a-40c6-b57b-67944dea77fc.mov
+
+
 
 ### 5. Scanned User(By Year/Quarter) **(Bar chart)**:
 
     The dashboard below is used to answer Question 5, and it helps stackholders to visualize the number of users scanned in a specific year or quarter. Users can use the slider to filer quarter and the dropdowm to filter year.
+
+
+
+https://user-images.githubusercontent.com/83235098/217133291-b997dce8-fdc8-44d9-85f1-6956f885fa5c.mov
+
