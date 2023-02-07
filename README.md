@@ -283,7 +283,7 @@ GROUP BY age_range;
 ![Q9 output](SQL%20questions%20output/Q9%20output.png)
 
 
-### Question10: 
+### Question10: What is the distribution of the sign up source?
 
 ```SQL
 SELECT
@@ -297,5 +297,22 @@ GROUP BY sign_up_source;
 
 
 ## Insights
+1. Distribution of Registered Users **(Map)**:
 
-![Viz1](https://github.com/Rebekah-Chuang/Fetch_DA_2023_intern/blob/main/Visualization/user_state_distribution.mov)
+    The visualization below show the distribution od registered users. From this visualization, we can know that Florida State is the state that the most registered users located, since the color of the Florida state is the darkest among the whole map.
+
+2. Rewards Receipts Status **(Highlight table)**:
+
+    From the highlight table below, we can know the number and percentage of the receipt that are FINISHED/FLAGGED/PENDING/REJECTED/SUBMITTED. For example, among all the rewards receipts, 91.15% of them are finished(which is 64,350). The darker color represents the higher percentage/number.
+
+3. Top 20 Stores's Revenue By Yea(2020-2023) **(Treemap)**:
+
+    In the following dashboard, I created a treemap to visualize store's revenue(top 20) each year. Users can use the slider above the dashboard to filter the year they want. The bigger the area, the larger the revenue. When users hover over the dashboard, they can see the corresponding store name and its revenue that year.
+
+4. Brand Count(By Category) **(Treemap)**:
+
+    This visualization can used to answer Question 6. From this treemap, we can know that **Beverages** is the category that has the most brand among all the categories. When users hover over the visualization, they can see the category and its brand count.
+
+5. Scanned User(By Year/Quarter) **(Bar chart)**:
+
+    The dashboard below is used to answer Question 5, and it helps stackholders to visualize the number of users scanned in a specific year or quarter. Users can use the slider to filer quarter and the dropdowm to filter year.
