@@ -30,14 +30,13 @@ The goal of this project is to:
 3. Choose something noteworthy to share with a non-technical stakeholder
 
 ## Clean the data
-First, I started cleaning the data using Python(NumPy, Pandas). I dropped useless columns, converted datatype, and saved them into new files.
-For more details about how I clean the data, please see the attached Jupyter Notebook.
+First, I cleaned the data using Python(NumPy, Pandas). I dropped useless columns, converted datatype, and saved them into new files. For more details about how I clean the data, please see the attached Jupyter Notebook.
 
 Path:  ```Fetch_DA_2023_intern/Clean Data.ipynb ```
 
 [Clean Data.ipynb](Clean%20Data.ipynb)
 
-When saving new files, I add a suffix ```_2``` to differenciate them from original files. However, I changed the file name into the original one when importing csv files into SQL Server so that it is more convenient when running queries.
+When saving new files, I add a suffix ```_2``` to differentiate them from the original files. However, I changed the file name to the original one when importing csv files into SQL Server to make it more convenient when running queries.
 
 Path:  ```Fetch_DA_2023_intern/New csv files/ ```
 
@@ -51,7 +50,7 @@ Path:  ```Fetch_DA_2023_intern/New csv files/ ```
 
 
 ## Create a New Relational Data Model
-The next step is diagraming a new structured relational data model. After cleaning the data, I created a new ER diagram(Entity-Relationship Diagram) for this database(shown as below).
+The next step is diagraming a new structured relational data model. After cleaning the data, I created a new ER diagram(Entity-Relationship Diagram) for this database(shown below).
 
 **PK** stands for **Primary Key**
 
@@ -60,11 +59,9 @@ The next step is diagraming a new structured relational data model. After cleani
 ![Relational Data Model Diagram](Relational%20Data%20Model.png)
 
  ## SQL Queries
-After creating a new relational data model, I need to write queries to ansert questions from business stakeholders.
-The SQL dialect I chose was **MSSQL**
+After creating a new relational data model, I need to write queries to answer questions from business stakeholders. The SQL dialect I chose was **MSSQL**.
 
-Question 1-5 are those given by Fetch Rewards, and Question 6-10 are those I created that might be helpful.
-For the original files of SQL Queries, please see attached file, but I will also leave my code and notes below!
+Questions 1-5 are those given by Fetch Rewards, and Questions 6-10 are those I created that might be helpful. For the original files of SQL Queries, please see attached file, but I will also leave my code and notes below!
 
 Path:  ```Fetch_DA_2023_intern/SQLQuery.sql ```
  
@@ -131,7 +128,7 @@ ORDER BY total_spent DESC;
 
 > **Note**
 >
-> Question3&4 can be answered using the same query. After looking at the output, I think there must be some typo in the original file because the price of **Starbucks Iced Coffee Premium Coffee Beverage Unsweetened Blonde Roast Bottle 48 Oz 1 Ct** shouldn't be that expensive. However, since I'm not sure about the correct price and if there are any other typos or not, I decided to keep the original number.
+>Questions 3&4 can be answered using the same query. After looking at the output, I believe there might be some typo in the original file because the price of **Starbucks Iced Coffee Premium Coffee Beverage Unsweetened Blonde Roast Bottle 48 Oz 1 Ct** shouldn't be that high. However, since I'm not sure about the correct price and if there are any other typos, I decided to keep the original number. 
 
 ```SQL
 WITH cte AS
@@ -219,7 +216,7 @@ ORDER BY brand_count DESC;
 ![Q6 output](SQL%20questions%20output/Q6%20output.png)
 
 
-### Question7: How much does each store earn in 2022 (list TOP 20)?
+### Question7: How much does each store earn in 2022 (list top 20)?
 
 ```SQL
 SELECT
@@ -299,7 +296,7 @@ GROUP BY sign_up_source;
 ## Insights
 ### 1. Distribution of Registered Users **(Map)**:
 
-The visualization below show the distribution od registered users. From this visualization, we can know that Florida State is the state that the most registered users located, since the color of the Florida state is the darkest among the whole map.
+The visualization below shows the distribution of registered users. From this visualization, we know that Florida State has the most registered users since the color of Florida is the darkest on the whole map.
     
     
 
@@ -309,7 +306,7 @@ https://user-images.githubusercontent.com/83235098/217133145-8b174404-0184-4d1a-
 
 ### 2. Rewards Receipts Status **(Highlight table)**:
 
-From the highlight table below, we can know the number and percentage of the receipt that are FINISHED/FLAGGED/PENDING/REJECTED/SUBMITTED. For example, among all the rewards receipts, 91.15% of them are finished(which is 64,350). The darker color represents the higher percentage/number.
+From the highlight table below, we can know the number and percentage of the receipt that is FINISHED/FLAGGED/PENDING/REJECTED/SUBMITTED. For example, among all the rewards receipts, 91.15% of them are finished(which is 64,350). The darker color represents the higher percentage/number.
     
     
 
@@ -317,9 +314,9 @@ https://user-images.githubusercontent.com/83235098/217133184-c99301a7-4f10-404f-
 
 
 
-### 3. Top 20 Stores's Revenue By Yea(2020-2023) **(Treemap)**:
+### 3. Top 20 Stores's Revenue By Year(2020-2023) **(Treemap)**:
 
-In the following dashboard, I created a treemap to visualize store's revenue(top 20) each year. Users can use the slider above the dashboard to filter the year they want. The bigger the area, the larger the revenue. When users hover over the dashboard, they can see the corresponding store name and its revenue that year.
+I created a treemap in the following dashboard to visualize the store's revenue(top 20) each year. Users can use the slider above the dashboard to filter the year they want. The bigger the area, the larger the revenue. Users can see the corresponding store name and revenue that year when they hover over the dashboard.
     
     
 
@@ -329,7 +326,7 @@ https://user-images.githubusercontent.com/83235098/217133216-0c7da09b-73c7-4774-
 
 ### 4. Brand Count(By Category) **(Treemap)**:
 
-This visualization can used to answer Question 6. From this treemap, we can know that **Beverages** is the category that has the most brand among all the categories. When users hover over the visualization, they can see the category and its brand count.
+This visualization can be used to answer Question 6. From this treemap, we know that **Beverages** is the category with the most brand among all the categories. Users can see the category and brand count when they hover over the visualization.
     
     
 
@@ -339,7 +336,7 @@ https://user-images.githubusercontent.com/83235098/217133252-923d1f49-df9a-40c6-
 
 ### 5. Scanned User(By Year/Quarter) **(Bar chart)**:
 
-The dashboard below is used to answer Question 5, and it helps stackholders to visualize the number of users scanned in a specific year or quarter. Users can use the slider to filer quarter and the dropdowm to filter year.
+The dashboard below can be used to answer Question 5 and helps stakeholders visualize the number of users scanned in a specific year or quarter. Users can use the slider to filter quarters and the dropdown to filter years.
 
 
 
