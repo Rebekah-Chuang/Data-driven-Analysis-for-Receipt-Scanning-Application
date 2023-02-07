@@ -10,15 +10,15 @@
 * [PartIII: Insights](https://github.com/Rebekah-Chuang/Fetch_DA_2023_intern#insights)
 
 ## Introduction
-**Name:**Chi-Ying(Rebekah)Chuang
+**Name:** Chi-Ying(Rebekah)Chuang
 
-**School:**University of Illinois at Urbana-Champaign
+**School:** University of Illinois at Urbana-Champaign
 
-**Degree:**Master of Science
+**Degree:** Master of Science
 
-**Program:**Information Management
+**Program:** Information Management
 
-**Expected Graduation:**May 2024
+**Expected Graduation:** May 2024
 
 ## About The Project
 This project is for Fetch Rewards Data Analytics 2023 Summer Internship. 
