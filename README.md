@@ -71,7 +71,7 @@ The next step is diagraming a new structured relational data model. After cleani
 ![Relational Data Model Diagram](Relational%20Data%20Model.png)
 
  ## SQL Queries
-After creating a new relational data model, I need to write queries to answer questions from business stakeholders. The SQL dialect I chose was **MSSQL**.
+After creating a new relational data model, I need to write queries to answer questions from business stakeholders. The SQL dialect I chose was **MS SQL Server**.
 
 Questions 1-5 are those given by Fetch Rewards, and Questions 6-10 are those I created that might be helpful. For the original files of SQL Queries, please see attached file, but I will also leave my code and notes below!
 
