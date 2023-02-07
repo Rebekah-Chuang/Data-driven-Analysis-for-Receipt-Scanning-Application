@@ -30,7 +30,7 @@ The goal of this project is to:
 3. Choose something noteworthy to share with a non-technical stakeholder
 
 ## Clean the data
-First, I cleaned the data using Python(NumPy, Pandas). I dropped useless columns, converted datatype, and saved them into new files. For more details about how I clean the data, please see the attached Jupyter Notebook.
+First, I cleaned the data using **Python(NumPy, Pandas)**. I dropped useless columns, converted datatype, and saved them into new files. For more details about how I clean the data, please see the attached Jupyter Notebook.
 
 Path:  ```Fetch_DA_2023_intern/Clean Data.ipynb ```
 
@@ -294,6 +294,8 @@ GROUP BY sign_up_source;
 
 
 ## Insights
+For the last part, I used **Tableau** to create visualizations and dashboards to help non-technical stakeholders easily understand my analysis.
+
 ### 1. Distribution of Registered Users **(Map)**:
 
 The visualization below shows the distribution of registered users. From this visualization, we know that Florida State has the most registered users since the color of Florida is the darkest on the whole map.
