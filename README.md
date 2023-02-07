@@ -62,7 +62,7 @@ Path:  ```Fetch_DA_2023_intern/New csv files/ ```
 
 
 ## Create a New Relational Data Model
-The next step is diagraming a new structured relational data model. After cleaning the data, I created a new ER diagram(Entity-Relationship Diagram) for this database(shown below).
+The next step is diagraming a new structured relational data model. After cleaning the data, I created a new ER diagram(Entity-Relationship Diagram) using **Lucidchart** for this database(shown below).
 
 **PK** stands for **Primary Key**
 
