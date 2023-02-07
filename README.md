@@ -297,6 +297,7 @@ GROUP BY sign_up_source;
 
 
 ## Insights
+<<<<<<< HEAD
 1. Distribution of Registered Users **(Map)**:
 
     The visualization below show the distribution od registered users. From this visualization, we can know that Florida State is the state that the most registered users located, since the color of the Florida state is the darkest among the whole map.
@@ -316,3 +317,6 @@ GROUP BY sign_up_source;
 5. Scanned User(By Year/Quarter) **(Bar chart)**:
 
     The dashboard below is used to answer Question 5, and it helps stackholders to visualize the number of users scanned in a specific year or quarter. Users can use the slider to filer quarter and the dropdowm to filter year.
+=======
+https://user-images.githubusercontent.com/83235098/217062289-875dd0b3-880e-4d09-a600-e6a07d56caca.mov
+>>>>>>> e134b0c81422c8d7dfc0d1802eecad713d30b72c
