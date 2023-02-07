@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-* [Introduction] (https://github.com/Rebekah-Chuang/Fetch_DA_2023_intern#introduction)
+* [Introduction](https://github.com/Rebekah-Chuang/Fetch_DA_2023_intern#introduction)
 * [About The Project](https://github.com/Rebekah-Chuang/Fetch_DA_2023_intern#about-the-project)
 * [Clean the data](https://github.com/Rebekah-Chuang/Fetch_DA_2023_intern#clean-the-data)
 * [PartI: Create a New Relational Data Model](https://github.com/Rebekah-Chuang/Fetch_DA_2023_intern#create-a-new-relational-data-model)
