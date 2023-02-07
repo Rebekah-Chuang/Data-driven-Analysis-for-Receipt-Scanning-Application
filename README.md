@@ -12,7 +12,7 @@
 ## Introduction
 Name:Chi-Ying(Rebekah)Chuang
 
-School:University of Illinois at Urbana-Champaign
+School:University of Illinois at Urbana-Champaign[![uiuc](https://github.com/Rebekah-Chuang/Fetch_DA_2023_intern/blob/main/SQL%20questions%20output/logo.png)][1]
 
 Degree:Master of Science
 
