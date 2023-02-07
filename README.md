@@ -8,6 +8,13 @@
 * [PartII: SQL Queries](https://github.com/Rebekah-Chuang/Fetch_DA_2023_intern#sql-queries)
 * [PartIII: Insights](https://github.com/Rebekah-Chuang/Fetch_DA_2023_intern#insights)
 
+## Introduction
+Name:Chi-Ying(Rebekah)Chuang
+School:University of Illinois at Urbana-Champaign
+Degree:Master of Science
+Program:Information Management
+Expected Graduation: May 2024
+
 ## About The Project
 This project is for Fetch Rewards Data Analytics 2023 Summer Internship. 
 The following csv files are the 4 given original sample data files:
