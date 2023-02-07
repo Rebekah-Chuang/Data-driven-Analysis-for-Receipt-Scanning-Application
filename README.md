@@ -328,7 +328,7 @@ https://user-images.githubusercontent.com/83235098/217133184-c99301a7-4f10-404f-
 
 
 
-### 3. Top 20 Stores's Revenue By Year(2020-2023) **(Treemap)**:
+### 3. Top 20 Stores' Revenue By Year(2020-2023) **(Treemap)**:
 
 I created a treemap in the following dashboard to visualize the store's revenue(top 20) each year. Users can use the slider above the dashboard to filter the year they want. The bigger the area, the larger the revenue. Users can see the corresponding store name and revenue that year when they hover over the dashboard.
     
