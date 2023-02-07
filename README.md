@@ -34,7 +34,7 @@ First, I cleaned the data using **Python(NumPy, Pandas)**. I dropped useless col
 
 Path:  ```Fetch_DA_2023_intern/Clean Data.ipynb ```
 
-[Clean Data.ipynb](Clean%20Data.ipynb)
+[Clean Data.ipynb](Original%20csv%20files/Clean%20Data.ipynb)
 
 When saving new files, I add a suffix ```_2``` to differentiate them from the original files. However, I changed the file name to the original one when importing csv files into SQL Server to make it more convenient when running queries.
 
