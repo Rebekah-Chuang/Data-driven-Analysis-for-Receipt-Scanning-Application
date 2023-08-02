@@ -1,4 +1,4 @@
-# Fetch-Rewards-Data-Analysis-Project
+# Data-driven Analysis for Receipt Scanning Application
 
 ## Table of Contents
 
