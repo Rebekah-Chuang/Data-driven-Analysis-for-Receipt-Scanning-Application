@@ -40,6 +40,8 @@ The goal of this project is to:
 
 3. Choose something noteworthy to share with a non-technical stakeholder
 
+Skills: Python(NumPy, Pandas), SQL, Tableau
+
 ## Clean the data
 First, I cleaned the data using **Python(NumPy, Pandas)**. I dropped useless columns, converted datatype, and saved them into new files. For more details about how I clean the data, please see the attached Jupyter Notebook.
 
